@@ -6,12 +6,14 @@ Rehost
 
 Replatform
 - Loop I used to test Load Balancing results in Terminal:
+
 `while true; do curl -s https://lb.christoroberts.com | grep -i '<title>' | sed -e 's/<title>//I' -e 's/<\/title>//I'; done`
 
 Rehost
 - Chat bot js in format that works as a snippet. Just replace the YOUR_API_KEY with your own.
-export default {
-    ```async fetch(request) {
+
+```export default {
+    async fetch(request) {
         // Fetch the original response
         let response = await fetch(request);
 
@@ -115,7 +117,7 @@ export default {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': \`Bearer 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\` // Replace with your actual API key
+                            'Authorization': \`Bearer YOUR_API_KEY\` // Replace with your actual API key
                         },
                         body: JSON.stringify({
                             model: "gpt-3.5-turbo",
